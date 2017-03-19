@@ -1,38 +1,23 @@
 //import liblari untuk membuat component
 import React from 'react'
-import { Container, Content, Button, Text } from 'native-base';
+import {StyleSheet, Text, View} from 'react-native';
 
 
 //Membuat component
-const Header = () => {
+const Header = (props) => {
     const {textStyle, viewStyle} = styles;
 
     return (
-        <Container>
-            <Content>
-
-                <Button small primary>
-                    <Text>Default Small</Text>
-                </Button>
-
-            </Content>
-        </Container>
+        <View style={viewStyle}>
+            <Text style={textStyle}>
+                {props.headerText}
+            </Text>
+        </View>
 
        
     )
 };
 
-const shadowOpt = {
-    width:160,
-    height:170,
-    color:"#000",
-    border:2,
-    radius:3,
-    opacity:0.2,
-    x:0,
-    y:3,
-    style:{marginVertical:5}
-}
 
 /*
  Mengubah posisi sebuah view, menggunakan 2 properti:
@@ -43,7 +28,7 @@ const shadowOpt = {
 
 const styles = {
     viewStyle: {
-        backgroundColor: '#F8F8F8',
+        backgroundColor: '#3F51B5',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 20,
@@ -56,6 +41,7 @@ const styles = {
     },
     textStyle: {
         fontSize: 20,
+        color:'#fff'
     }
 };
 
