@@ -24,3 +24,14 @@ const styles = StyleSheet.create({
     },
 });
 */
+
+/*
+Note
+
+-> state:
+    1. Plain javascript untuk record dan respon dari event trigger
+    2. ketika ingin mengupdate component, menggunakan this.setState
+    3. Untuk mengganti state hanya bisa menggunakan 'setState',
+       TIDAK BISA menggunakan this.state
+-> Membuat Looping d React menggunakan .map(namaArrayObjek => isi dari setiap objeknya)
+*/
