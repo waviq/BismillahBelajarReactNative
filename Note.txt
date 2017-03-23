@@ -1,0 +1,2 @@
+component penting
+TouchableOpacity = untuk agar button bisa klik berkedip
