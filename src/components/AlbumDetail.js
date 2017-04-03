@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import {Text, View, Image} from 'react-native';
+import {Text, View, Image, Alert, Linking} from 'react-native';
 import Card from './Card'
 import CardSection from './CardSection'
 import Button from './Button'
@@ -16,6 +16,7 @@ class AlbumDetail extends React.Component {
             headerTextStyle,
             imagesStyle} = styles
         const {thumbnail_image} = this.props.albumProp
+
         return (
             <Card>
                 <CardSection>
@@ -31,7 +32,9 @@ class AlbumDetail extends React.Component {
                     <Image style={imagesStyle} source={{uri: this.props.albumProp.image}}/>
                 </CardSection>
                 <CardSection>
-                    <Button />
+                    <Button onPencet={() => Linking.openURL(this.props.albumProp.url)}>
+                        Buy Now
+                    </Button>
                 </CardSection>
             </Card>
         );
